@@ -1,0 +1,9 @@
+
+
+
+
+
+.tm-quantity-alt input::-webkit-outer-spin-button,
+.tm-quantity-alt input::-webkit-inner-spin-button {
+  -webkit-appearance: auto !important;
+}

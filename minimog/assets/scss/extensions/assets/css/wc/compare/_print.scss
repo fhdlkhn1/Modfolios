@@ -1,0 +1,61 @@
+/* Print */
+
+.woosc-area .table-print,
+.woosc-area .tr-print,
+.woosc-area .td-print,
+.woosc_table .tr-print,
+.woosc_table .td-print {
+	 display: none;
+}
+
+@media print {
+	 .woosc-area .table-print {
+		  display: table;
+	 }
+
+	 .woosc-area .tr-print {
+		  display: table-row;
+	 }
+
+	 .woosc-area .td-print {
+		  display: table-cell;
+	 }
+
+	 .woosc-area {
+		  font-size: 14px !important;
+	 }
+
+	 .woosc-area .woosc-bar, .woosc_table thead, .woosc_table .woosc-table-close, .woosc_table .woosc-remove {
+		  display: none !important;
+	 }
+
+	 .woosc-area .woosc-inner .woosc-table {
+		  padding: 0;
+	 }
+
+	 .woosc-area {
+		  position: absolute;
+		  height: auto;
+	 }
+
+	 .woosc-area .woosc-inner {
+		  height: auto;
+	 }
+
+	 .woosc-area .woosc-inner .woosc-table {
+		  position: absolute;
+		  height: auto;
+	 }
+
+	 .woosc-area .woosc-inner .woosc-table .woosc-table-inner {
+		  height: auto;
+		  max-height: unset;
+	 }
+
+	 .woosc-area .tr-name td:not(.td-label), .woosc-area .tr-name td:not(.td-label) a {
+		  font-weight: 700;
+		  text-transform: uppercase;
+		  pointer-events: none;
+		  text-decoration: none;
+	 }
+}

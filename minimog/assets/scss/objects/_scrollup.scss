@@ -1,0 +1,63 @@
+.page-scroll-up {
+	@extend %NormalTransition;
+	position: fixed;
+	right: 30px;
+	bottom: -60px;
+	z-index: 999;
+	display: block;
+	border-radius: 50%;
+	opacity: 0;
+	visibility: hidden;
+
+	button {
+		position: relative;
+		padding: 0;
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+	}
+
+	.scroll-up-icon {
+		@extend %NormalTransition;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		svg {
+			display: inline-block;
+			vertical-align: middle;
+			width: 1em;
+			height: auto;
+
+			*[stroke]:not([stroke='none']) {
+				stroke: currentColor;
+			}
+
+			*[fill]:not([fill='none']) {
+				fill: currentColor;
+			}
+		}
+	}
+
+	&.show {
+		bottom: 30px;
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.page-has-mobile-tabs {
+		.page-scroll-up {
+			bottom: 0;
+
+			&.show {
+				bottom: 75px;
+			}
+		}
+	}
+}

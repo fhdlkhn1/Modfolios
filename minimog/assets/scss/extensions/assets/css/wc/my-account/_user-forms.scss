@@ -1,0 +1,124 @@
+.woocommerce-account {
+	.woocommerce-privacy-policy-text {
+		margin: 0 0 20px;
+	}
+}
+
+.woocommerce-form-wrap {
+	> h2 {
+		font-size: 24px;
+		font-weight: $heading-font-weight-secondary;
+		line-height: 1.6;
+		margin: 0 0 18px;
+	}
+
+	.button {
+		width: 100%;
+	}
+
+	.password-input {
+		display: block;
+		position: relative;
+
+		.show-password-input {
+			@extend %FontAwesomeRegular;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: auto;
+			z-index: 1;
+			background: none !important;
+			box-shadow: none !important;
+			padding: 0 15px !important;
+			border: 0;
+			font-size: 14px;
+			color: $text-color;
+
+			&:hover {
+				color: $heading-color;
+			}
+
+			&:before {
+				content: '\f06e';
+			}
+
+			&.display-password {
+				&:before {
+					content: '\f070';
+				}
+			}
+		}
+	}
+}
+
+.woocommerce-form-has-background {
+	background: #fff;
+	box-shadow: 0 0 30px rgba(0, 0, 0, .05);
+	border: 1px solid #eee;
+	padding: 29px 30px 48px;
+}
+
+.woocommerce-form-login {
+	.lost_password {
+		a {
+			font-size: 15px;
+			display: inline-block;
+			margin-bottom: 7px;
+		}
+	}
+
+	.mo-openid-app-icons {
+		margin-top: 20px;
+	}
+
+	.woocommerce-button {
+		display: block;
+		width: 100%;
+	}
+}
+
+.woocommerce-form-register-wrap {
+	padding: 30px 0 0;
+}
+
+// Center form if has only form.
+.page-main-content > article > .woocommerce > .woocommerce-form-wrap {
+	max-width: 570px;
+	margin: 0 auto;
+}
+
+.woocommerce-account {
+    .password-input {
+        display: block;
+        position: relative;
+
+        .show-password-input {
+            @extend %FontAwesomeRegular;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: auto;
+            z-index: 1;
+            background: none !important;
+            box-shadow: none !important;
+            padding: 0 15px !important;
+            border: 0;
+            font-size: 14px;
+            color: $text-color;
+
+            &:hover {
+                color: $heading-color;
+            }
+
+            &:before {
+                content: '\f06e';
+            }
+
+            &.display-password {
+                &:before {
+                    content: '\f070';
+                }
+            }
+        }
+    }
+}

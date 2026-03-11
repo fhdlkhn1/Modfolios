@@ -1,0 +1,1 @@
+(n=>{function e(n,e){(n=n.find(".minimog-grid-wrapper")).MinimogGridQuery(),n.on("MinimogQueryEnd",function(n,e,o){e.find(".minimog-grid").append(o)})}n(window).on("elementor/frontend/init",function(){elementorFrontend.hooks.addAction("frontend/element_ready/tm-blog.default",e),elementorFrontend.hooks.addAction("frontend/element_ready/tm-product.default",e)})})(jQuery);

@@ -1,0 +1,1 @@
+(e=>{function n(e,n){e.find(".minimog-grid-wrapper").MinimogGridLayout()}e(window).on("elementor/frontend/init",function(){elementorFrontend.hooks.addAction("frontend/element_ready/tm-image-gallery.default",n),elementorFrontend.hooks.addAction("frontend/element_ready/tm-product-categories-metro.default",n)})})(jQuery);

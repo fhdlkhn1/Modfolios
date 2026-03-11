@@ -1,0 +1,209 @@
+.minimog-grid-loader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: #111;
+	background: rgba(255, 255, 255, .3);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&.show {
+		pointer-events: auto;
+		z-index: 2;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.sk-wrap {
+		margin: 0 auto;
+	}
+
+	.sk-circle {
+		width: 80px;
+		height: 80px;
+	}
+}
+
+.minimog-infinite-loader {
+	display: none;
+	margin: 0;
+	color: $heading-color;
+
+	.sk-wrap {
+		margin: 0 auto;
+	}
+
+	&.show {
+		display: inline-block;
+	}
+}
+
+.minimog-grid-pagination {
+	padding-top: 40px;
+	text-align: center;
+
+	.pagination-wrapper {
+		// display: inline-block;
+		display: block; // Make tm-button can be full if set width 100%
+	}
+
+	.page-pagination {
+		display: inline-block;
+	}
+}
+
+.minimog-grid-messages {
+	text-align: center;
+}
+
+.minimog-grid-metro {
+	.grid-item-height {
+		.minimog-box,
+		.minimog-image {
+			height: 100%;
+		}
+
+		.minimog-image {
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+// Fake layout. Improvement better display on page load.
+.lazy-grid {
+	display: grid;
+	grid-template-columns: repeat(var(--grid-columns, 3), 1fr);
+	grid-gap: calc(1px * var(--grid-gutter, 30));
+
+	.grid-sizer {
+		display: none;
+	}
+
+	.grid-item {
+		min-width: 0;
+	}
+
+	&.loaded {
+		display: block;
+
+		.grid-sizer {
+			display: block;
+		}
+	}
+}
+
+.m-grid-alternating {
+	grid-gap: calc(1px * var(--grid-gutter, 30)) 0 !important;
+	margin-left: calc((1px * var(--grid-gutter, 30)) / -2);
+	margin-right: calc((1px * var(--grid-gutter, 30)) / -2);
+
+	.grid-item {
+		padding-left: calc((1px * var(--grid-gutter, 30)) / 2);
+		padding-right: calc((1px * var(--grid-gutter, 30)) / 2);
+		grid-column: span var(--grid-column, 1);
+	}
+}
+
+.minimog-grid-wrapper {
+	&[style*='--grid-columns-desktop:'] {
+		--grid-columns: var(--grid-columns-desktop);
+	}
+
+	&[style*='--grid-gutter-desktop:'] {
+		--grid-gutter: var(--grid-gutter-desktop);
+	}
+}
+
+[style*='--grid-column-desktop:'] {
+	--grid-column: var(--grid-column-desktop);
+}
+
+@include elementor-breakpoint-up(widescreen) {
+	.minimog-grid-wrapper {
+		&[style*='--grid-columns-widescreen:'] {
+			--grid-columns: var(--grid-columns-widescreen);
+		}
+
+		&[style*='--grid-gutter-widescreen:'] {
+			--grid-gutter: var(--grid-gutter-widescreen);
+		}
+	}
+}
+
+@include elementor-breakpoint-down(laptop) {
+	.minimog-grid-wrapper {
+		&[style*='--grid-columns-laptop:'] {
+			--grid-columns: var(--grid-columns-laptop);
+		}
+
+		&[style*='--grid-gutter-laptop:'] {
+			--grid-gutter: var(--grid-gutter-laptop);
+		}
+	}
+}
+
+@include elementor-breakpoint-down(tablet-extra) {
+	.minimog-grid-wrapper {
+		&[style*='--grid-columns-tablet-extra:'] {
+			--grid-columns: var(--grid-columns-tablet-extra);
+		}
+
+		&[style*='--grid-gutter-tablet-extra:'] {
+			--grid-gutter: var(--grid-gutter-tablet-extra);
+		}
+	}
+}
+
+@include elementor-breakpoint-down(tablet) {
+	.minimog-grid-wrapper {
+		&[style*='--grid-columns-tablet:'] {
+			--grid-columns: var(--grid-columns-tablet);
+		}
+
+		&[style*='--grid-gutter-tablet:'] {
+			--grid-gutter: var(--grid-gutter-tablet);
+		}
+	}
+
+	[style*='--grid-column-tablet:'] {
+		--grid-column: var(--grid-column-tablet);
+	}
+}
+
+@include elementor-breakpoint-down(mobile-extra) {
+	.minimog-grid-wrapper {
+		&[style*='--grid-columns-mobile-extra:'] {
+			--grid-columns: var(--grid-columns-mobile-extra);
+		}
+
+		&[style*='--grid-gutter-mobile-extra:'] {
+			--grid-gutter: var(--grid-gutter-mobile-extra);
+		}
+	}
+
+	[style*='--grid-column-mobile-extra:'] {
+		--grid-column: var(--grid-column-mobile-extra);
+	}
+}
+
+@include elementor-breakpoint-down(mobile) {
+	.minimog-grid-wrapper {
+		&[style*='--grid-columns-mobile:'] {
+			--grid-columns: var(--grid-columns-mobile);
+		}
+
+		&[style*='--grid-gutter-mobile:'] {
+			--grid-gutter: var(--grid-gutter-mobile);
+		}
+	}
+}

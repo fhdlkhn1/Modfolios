@@ -1,0 +1,1055 @@
+/* ========================================
+   Modfolio Buyer Dashboard Styles
+   ======================================== */
+
+/* Force My Account page to use full-width container */
+.woocommerce-account .page-content > .container {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Optional: Slightly reduce padding on larger screens */
+@media (min-width: 1400px) {
+    .woocommerce-account .page-content > .container {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+.modfolio-buyer-dashboard {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ========================================
+   Welcome Header
+   ======================================== */
+
+.dashboard-welcome-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px 30px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.welcome-user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-text {
+    font-size: 11px;
+    font-weight: 500;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 6px 0;
+}
+
+.user-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.welcome-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.membership-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: #e8f4f8;
+    color: #0891b2;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.last-login {
+    font-size: 12px;
+    color: #999;
+}
+
+/* ========================================
+   Stats Cards Row
+   ======================================== */
+
+.dashboard-stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.stat-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.stat-spending {
+    color: #0891b2;
+}
+
+.stat-budget {
+    color: #10b981;
+}
+
+.stat-downloads {
+    color: #0891b2;
+}
+
+.stat-account {
+    color: #ef4444;
+}
+
+/* ========================================
+   Main Content Grid
+   ======================================== */
+
+.dashboard-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 24px;
+}
+
+.dashboard-left-column,
+.dashboard-right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ========================================
+   Dashboard Section Common
+   ======================================== */
+
+.dashboard-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.view-all-link {
+    font-size: 13px;
+    font-weight: 500;
+    color: #0891b2;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.view-all-link:hover {
+    color: #0e7490;
+    text-decoration: none;
+}
+
+/* ========================================
+   Recent Downloads Section
+   ======================================== */
+
+.downloads-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.download-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: #fafafa;
+    border-radius: 10px;
+    transition: background 0.2s;
+}
+
+.download-item:hover {
+    background: #f5f5f5;
+}
+
+.download-thumb {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #e5e5e5;
+}
+
+.download-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.placeholder-thumb {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #e5e5e5 0%, #d0d0d0 100%);
+}
+
+.download-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.download-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 4px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.download-meta {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+}
+
+.download-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 16px;
+    background: transparent;
+    border: none;
+    color: #666;
+    font-size: 11px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s;
+    border-radius: 8px;
+}
+
+.action-btn:hover {
+    color: #0891b2;
+    background: #e0f7fa;
+    text-decoration: none;
+}
+
+.action-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.action-btn span {
+    white-space: nowrap;
+}
+
+/* ========================================
+   Custom Shoot Requests Section
+   ======================================== */
+
+.custom-shots-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.custom-shot-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    background: #fafafa;
+    border-radius: 10px;
+    transition: background 0.2s;
+}
+
+.custom-shot-item:hover {
+    background: #f5f5f5;
+}
+
+.shot-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    width: 100%;
+}
+
+.vendor-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.shot-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.shot-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 6px 0;
+}
+
+.shot-meta {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.auto-approve-notice {
+    font-size: 11px;
+    color: #0891b2;
+    font-weight: 500;
+    margin: 6px 0 0 0;
+}
+
+.shot-status-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    line-height: 1.4;
+    vertical-align: middle;
+}
+
+.section-header h3 .shot-status-badge {
+    margin-left: 8px;
+    position: relative;
+    top: -1px;
+}
+
+.shot-status-badge.status-pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.shot-status-badge.status-quoted {
+    background: #e0e7ff;
+    color: #3730a3;
+}
+
+.shot-status-badge.status-in_progress,
+.shot-status-badge.status-accepted {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.shot-status-badge.status-delivered {
+    background: #cffafe;
+    color: #155e75;
+}
+
+.custom-shot-pending {
+    opacity: 0.85;
+}
+
+.custom-shot-pending .shot-header {
+    align-items: center;
+}
+
+.shot-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.shot-actions .action-btn {
+    padding: 8px 12px;
+}
+
+.action-approve {
+    color: #10b981;
+}
+
+.action-approve:hover {
+    background: #d1fae5;
+    color: #059669;
+}
+
+/* ========================================
+   Spending Overview Section
+   ======================================== */
+
+.spending-overview-section .section-header {
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.chart-filters {
+    font-size: 12px;
+    color: #999;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.chart-filter-btn {
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: color 0.2s, background 0.2s;
+}
+
+.chart-filter-btn:hover {
+    color: #0891b2;
+}
+
+.chart-filter-btn.filter-active {
+    color: #0891b2;
+    font-weight: 500;
+}
+
+.filter-separator {
+    margin: 0 4px;
+    color: #ddd;
+}
+
+.spending-chart-container {
+    height: 180px;
+    position: relative;
+}
+
+/* ========================================
+   Budget Control Section
+   ======================================== */
+
+.budget-control-section {
+    padding: 20px 24px;
+}
+
+.budget-control-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.budget-control-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.budget-amount {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.budget-progress {
+    position: relative;
+}
+
+.budget-progress-bar {
+    height: 8px;
+    background: #e5e5e5;
+    border-radius: 4px;
+    overflow: visible;
+    position: relative;
+}
+
+.budget-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0891b2, #10b981);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.budget-progress-fill.warning {
+    background: linear-gradient(90deg, #f59e0b, #ef4444);
+}
+
+.budget-warning-dot {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+    width: 14px;
+    height: 14px;
+    background: #ef4444;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
+}
+
+.budget-warning-text {
+    font-size: 12px;
+    color: #ef4444;
+    margin: 12px 0 0 0;
+}
+
+/* ========================================
+   Notifications Section
+   ======================================== */
+
+.notifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.notification-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 16px;
+    background: #fafafa;
+    border-radius: 10px;
+    transition: background 0.2s;
+}
+
+.notification-item:hover {
+    background: #f5f5f5;
+}
+
+.notification-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.notification-message {
+    font-size: 12px;
+    color: #666;
+    margin: 0 0 4px 0;
+}
+
+.notification-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.notification-action-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #0891b2;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+.notification-action-btn:hover {
+    background: #0e7490;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ========================================
+   Empty State
+   ======================================== */
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #999;
+}
+
+.empty-state p {
+    margin: 0;
+}
+
+/* ========================================
+   Responsive Styles
+   ======================================== */
+
+@media (max-width: 1200px) {
+    .dashboard-content-grid {
+        grid-template-columns: 1fr 350px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .dashboard-content-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .dashboard-stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .download-actions {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-welcome-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .welcome-meta {
+        align-items: flex-start;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .dashboard-stats-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 16px;
+    }
+
+    .stat-value {
+        font-size: 24px;
+    }
+
+    .download-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .download-actions {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid #eee;
+    }
+
+    .shot-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .shot-header {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-stats-row {
+        grid-template-columns: 1fr;
+    }
+
+    .user-avatar {
+        width: 60px;
+        height: 60px;
+    }
+
+    .user-name {
+        font-size: 20px;
+    }
+
+    .action-btn {
+        padding: 8px 10px;
+        font-size: 10px;
+    }
+
+    .action-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* ========================================
+   Help & Support Page Styles
+   ======================================== */
+
+.modfolio-help-support {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Content Grid */
+.help-support-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.help-support-left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.help-support-right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Support Option Cards (Horizontal Layout) */
+.support-option-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid #eee;
+}
+
+.support-option-card:hover {
+    border-color: #0891b2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+}
+
+.option-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    border-radius: 12px;
+    color: #1a1a1a;
+    flex-shrink: 0;
+}
+
+.option-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.option-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 6px 0;
+}
+
+.option-content p {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.option-arrow {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0891b2;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.support-option-card:hover .option-arrow {
+    background: #0e7490;
+}
+
+/* Getting Started Section */
+.getting-started-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eee;
+}
+
+.getting-started-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.getting-started-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.expand-collapse-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0891b2;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.expand-collapse-btn:hover {
+    background: #0e7490;
+}
+
+.expand-collapse-btn svg {
+    transition: transform 0.2s;
+}
+
+.getting-started-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* FAQ Items in Getting Started */
+.faq-item {
+    border-bottom: 1px solid #eee;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: color 0.2s;
+}
+
+.faq-question:hover {
+    color: #0891b2;
+}
+
+.faq-question span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+    flex: 1;
+    padding-right: 12px;
+}
+
+.faq-question:hover span {
+    color: #0891b2;
+}
+
+.faq-arrow {
+    color: #999;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+}
+
+.faq-item.active .faq-arrow {
+    transform: rotate(180deg);
+    color: #0891b2;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 0 14px 0;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-answer p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.quick-link-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-top: none;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.quick-link-item:first-child {
+    border-top: 1px solid #eee;
+    border-radius: 12px 12px 0 0;
+}
+
+.quick-link-item:last-child {
+    border-radius: 0 0 12px 12px;
+}
+
+.quick-link-item:hover {
+    background: #f9fafb;
+    text-decoration: none;
+}
+
+.quick-link-item span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.quick-link-item:hover span {
+    color: #0891b2;
+}
+
+.quick-link-item svg {
+    color: #0891b2;
+    flex-shrink: 0;
+}
+
+/* Help & Support Responsive */
+@media (max-width: 1200px) {
+    .help-support-content-grid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .help-support-content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .support-option-card {
+        padding: 16px 20px;
+    }
+
+    .option-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .option-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .option-content h3 {
+        font-size: 15px;
+    }
+
+    .option-content p {
+        font-size: 12px;
+    }
+
+    .option-arrow {
+        width: 32px;
+        height: 32px;
+    }
+
+    .option-arrow svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .quick-link-item {
+        padding: 14px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .support-option-card {
+        padding: 14px 16px;
+        gap: 12px;
+    }
+
+    .option-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .faq-question span {
+        font-size: 13px;
+    }
+
+    .quick-link-item span {
+        font-size: 13px;
+    }
+}

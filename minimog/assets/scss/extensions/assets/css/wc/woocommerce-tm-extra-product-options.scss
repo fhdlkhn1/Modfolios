@@ -1,0 +1,7 @@
+@import '../base';
+
+/* Fix Quantity Input - Extra Product Options & Add-Ons for WooCommerce by ThemeComplete */
+.tm-quantity-alt input::-webkit-outer-spin-button,
+.tm-quantity-alt input::-webkit-inner-spin-button {
+	-webkit-appearance: auto !important;
+}

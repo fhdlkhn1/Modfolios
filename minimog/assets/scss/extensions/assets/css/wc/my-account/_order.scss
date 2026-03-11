@@ -1,0 +1,130 @@
+.woocommerce-orders-table-wrap {
+	 border-radius: $box-rounded;
+	 border: 1px solid $box-grey-background;
+}
+
+.woocommerce-order-details {
+	 .order-again {
+		  margin-top: 10px;
+	 }
+}
+
+.woocommerce-orders-table,
+.woocommerce-table--order-details {
+	 margin-bottom: 0;
+	 border-collapse: separate;
+	 border-spacing: 4px;
+	 margin: 0 -4px;
+	 width: calc(100% + 8px);
+	 position: relative;
+	 z-index: 0;
+
+	 th {
+		  font-size: 16px;
+		  font-weight: $body-font-weight-medium;
+	 }
+
+	 th,
+	 td {
+		  border: 0;
+		  position: relative;
+		  z-index: 2;
+		  text-align: left;
+		  background: none;
+	 }
+
+	 tbody,
+	 tfoot {
+		  tr {
+				position: relative;
+
+				&:after {
+					 content: '';
+					 display: inline-block;
+					 position: absolute;
+					 top: 0;
+					 left: 0;
+					 right: 0;
+					 bottom: 0;
+					 background-color: #f8f8f8;
+					 border-radius: 5px;
+					 z-index: -1;
+				}
+		  }
+	 }
+
+	 .amount {
+		  color: inherit;
+	 }
+}
+
+.woocommerce-orders-table__cell-order-actions {
+	 .button {
+		  --minimog-color-button-text: #000;
+		  --minimog-color-button-border: #fff;
+		  --minimog-color-button-background: #fff;
+		  min-width: 100px;
+		  line-height: 38px;
+		  height: 40px;
+		  padding: 0 15px;
+		  margin: 3px;
+	 }
+}
+
+.woocommerce-customer-details {
+	 margin: 30px 0 0;
+}
+
+.woocommerce-orders-table__cell-order-number {
+	 font-weight: 500;
+}
+
+.woocommerce-orders-table__cell-order-status {
+	 font-weight: 500;
+	 color: var(--status-color, #000);
+}
+
+.woocommerce-orders-table__row--status {
+	 &-completed {
+		  --status-color: #60BC7F;
+	 }
+
+	 &-refunded {
+		  --status-color: #6951CF;
+	 }
+
+	 &-failed {
+		  --status-color: #E91925;
+	 }
+
+	 &-processing {
+		  --status-color: #3F99DC;
+	 }
+
+	 &-pending {
+		  --status-color: #E4A508;
+	 }
+
+	 &-on-hold {
+		  --status-color: #E4A508;
+	 }
+}
+
+.woocommerce-view-order {
+	 .woocommerce-order-details {
+		  margin: 0;
+	 }
+}
+
+@include media-breakpoint-down(sm) {
+	 .woocommerce-orders-table,
+	 .woocommerce-table--order-details {
+		  tr {
+				padding: 15px !important;
+
+				+ tr {
+					 margin-top: 5px;
+				}
+		  }
+	 }
+}

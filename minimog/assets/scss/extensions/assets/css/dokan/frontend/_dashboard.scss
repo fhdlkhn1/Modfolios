@@ -1,0 +1,21 @@
+@import 'dashboard/orders';
+@import 'dashboard/reviews';
+@import 'dashboard/settings';
+
+.dokan-dashboard-wrap {
+	.dokan-btn {
+		box-shadow: none !important;
+	}
+}
+
+.vendor-customer-registration {
+	 margin-bottom: 14px !important;
+
+	 br {
+		  display: none;
+	 }
+
+	 > label {
+		  margin-right: 15px !important;
+	 }
+}

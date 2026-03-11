@@ -1,0 +1,101 @@
+@keyframes image-fade-in {
+	0%{
+		opacity:0;
+		transform:scale(1.1);
+	}
+	10%{
+		opacity: 0.1;
+	}
+	20%{
+		opacity: 0.2;
+	}
+	to{
+		opacity: 1;
+		transform:scale(1);
+	}
+}
+
+img {
+	max-width: 100%; /* Make sure images are scaled correctly. */
+	height: auto; /* Adhere to container width. */
+	vertical-align: top;
+}
+
+figcaption {
+	padding: 16px 0 0;
+	text-align: center;
+	font-size: .9em;
+}
+
+m-image {
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 100%;
+	width: var(--lazy-image-width, 100%);
+
+	img {
+		opacity: 0;
+	}
+}
+
+[data-image-loading] {
+	position: relative;
+
+	&:after {
+		content: '';
+		background-color: #000;
+		animation: placeholder-background-loading 1.5s infinite linear;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		pointer-events: none;
+	}
+}
+
+.m-img-loaded {
+	img {
+		animation: 0.5s cubic-bezier(0.26, 0.54, 0.32, 1) 0s backwards;
+		animation-name: image-fade-in;
+		opacity: 1;
+		transform: none;
+	}
+}
+
+m-background {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0;
+	}
+}
+
+[data-background-loading] {
+	position: relative;
+	background-color: transparent !important;
+	background-image: none !important;
+
+	&:after {
+		content: '';
+		background-color: #000;
+		animation: placeholder-background-loading 1.5s infinite linear;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		pointer-events: none;
+	}
+}

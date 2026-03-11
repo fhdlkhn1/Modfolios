@@ -1,0 +1,6 @@
+*.zip
+*.log
+tmpclaude-*
+nul
+.DS_Store
+Thumbs.db

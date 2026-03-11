@@ -1,0 +1,207 @@
+/**
+ * Membership Restriction Styles
+ * Used for Pro/Elite upgrade prompts in vendor dashboard
+ */
+
+.membership-upgrade-box {
+    /* max-width: 500px;
+    margin: 60px auto; */
+    padding: 50px 40px;
+    text-align: center;
+    /* background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); */
+    background: #fff;
+    border-radius: 20px;
+    /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); */
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
+    transition: all 0.3s ease-in-out;
+}
+
+.membership-upgrade-box .upgrade-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, #00c4aa 0%, #00a896 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.membership-upgrade-box .upgrade-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: #ffffff;
+}
+
+.membership-upgrade-box .upgrade-icon::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+    border-radius: 50%;
+    display: none !important;
+}
+
+.membership-upgrade-box .upgrade-icon::before {
+    content: '\26A1';
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    font-size: 14px;
+    z-index: 1;
+    display: none !important;
+}
+
+.membership-upgrade-box .upgrade-title {
+    font-size: 28px;
+    font-weight: 700 !important;
+    color: #000;
+    margin-bottom: 15px;
+    font-style: normal !important;
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.membership-upgrade-box .upgrade-description {
+    font-size: 15px;
+    color: #1a1a1a !important;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.membership-upgrade-box .upgrade-description .highlight {
+    color: #00c4aa;
+    font-weight: 600;
+}
+
+/* Benefits Grid */
+.membership-upgrade-box .upgrade-benefits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.membership-upgrade-box .benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    /* border: 1px solid rgba(255, 255, 255, 0.08); */
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.membership-upgrade-box .benefit-item .benefit-icon {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    background: rgba(0, 196, 170, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.membership-upgrade-box .benefit-item .benefit-icon svg {
+    width: 14px;
+    height: 14px;
+    fill: #00c4aa;
+}
+
+.membership-upgrade-box .benefit-item .benefit-text {
+    font-size: 13px;
+    /* color: rgba(255, 255, 255, 0.85); */
+    color: #1a1a1a !important;
+    line-height: 1.4;
+}
+
+/* Upgrade Button */
+.membership-upgrade-box .upgrade-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 36px;
+    background: linear-gradient(135deg, #00c4aa 0%, #00a896 100%);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 196, 170, 0.4);
+}
+
+.membership-upgrade-box .upgrade-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 196, 170, 0.5);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.membership-upgrade-box .upgrade-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    transition: transform 0.3s ease;
+}
+
+.membership-upgrade-box .upgrade-btn:hover svg {
+    transform: translateX(4px);
+}
+
+
+
+/* ====== dark theme  ====== */
+.dark__theme .membership-upgrade-box{
+    background: #202020 !important;
+}
+.dark__theme .membership-upgrade-box .upgrade-title{
+    color: #fff !important;
+}
+.dark__theme .membership-upgrade-box .benefit-item .benefit-text,
+.dark__theme .membership-upgrade-box .upgrade-description{
+    color: #bababa !important;
+}
+.dark__theme .membership-upgrade-box .benefit-item{
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+    .membership-upgrade-box {
+        margin: 30px auto;
+        padding: 35px 25px;
+    }
+
+    .membership-upgrade-box .upgrade-benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .membership-upgrade-box .upgrade-title {
+        font-size: 22px;
+    }
+
+    .membership-upgrade-box .upgrade-btn {
+        padding: 14px 28px;
+        font-size: 15px;
+    }
+}
